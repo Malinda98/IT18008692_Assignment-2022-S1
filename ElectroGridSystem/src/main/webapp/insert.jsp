@@ -3,11 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Title</title>
-	
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>	
     <script src="assets/js/croppie.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 	
+	<style type="text/css">
+
+label {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: xx-small;
+}
+
+
+</style>
 </head>
 <body>
 	
@@ -16,37 +28,39 @@
 <br>
 <p></p>
 
-	                    <div>User Register</div>
+	                    <h2  font-family: "Times New Roman", Times, serif;>Units Adding Page</h2><br>
 	                        <form id="add_units">
-	                            <div>
-	                                <label>ID :</label>
-	                                <div>
-	                                    <input type="text" id="id" class="form-control" name="id">
+	                            <div class="form-group row">
+	                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm" align="center" font-weight: bold>ID:</label>
+	                                <div class="col-sm-3">
+	                                    <input type="text" id="id" class="form-control" name="id" class="form-control form-control-sm" placeholder="Please enter id">
 	                                </div>
 	                            </div>
-	                            
-	                            <div>
-	                                <label>Start :</label>
-	                                <div>
-	                                    <input type="text" id="start" class="form-control" name="start">
+	                            <br>
+	                            <div class="form-group row">
+	                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm" align="center">Start Units :</label>
+	                                <div class="col-sm-3">
+	                                    <input type="text" id="start" class="form-control" name="start" class="form-control form-control-sm" placeholder="Please enter Start units">
 	                                </div>
 	                            </div>
-	                            
-	                            <div>
-	                                <label>End :</label>
-	                                <div>
-	                                    <input type="text" id="end" class="form-control" name="end">
+	                            <br>
+	                            <div class="form-group row">
+	                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm" align="center">End Units :</label>
+	                                <div class="col-sm-3">
+	                                    <input type="text" id="end" class="form-control" name="end" class="form-control form-control-sm" placeholder="Please enter End units">
 	                                </div>
 	                            </div>	                          
-	                            
+	                            <br>
 	                            <div>
-	                                <button type="submit" class="btn btn-success">
+	                                <button type="submit" class="btn btn-success btn-lg">
 	                                    Add
 	                                </button>
-	                                <a href="edit_n_delete.jsp" class="btn btn-success">
+	                                
+	                                <a href="edit_n_delete.jsp" class="btn btn-primary btn-lg">
 	                                    List
 	                                </a>
 	                            </div>
+	                            <br>
 	                    	</form>
 	                    </div>
 
@@ -64,9 +78,9 @@ $(document).ready(function () {
 
         },
         messages: {
-        	id: "N Required!",
-            start: "N Required!",
-            end: "N Required!"
+        	id: "Id Required!",
+            start: "Start Unit Required!",
+            end: "End Unit Required!"
         },
         submitHandler: function () {
         	var fromData = JSON.stringify({
